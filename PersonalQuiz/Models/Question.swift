@@ -7,14 +7,14 @@
 
 struct Question {
     let title: String
-    let responceType: ResponceType
+    let responseType: ResponseType
     let answers: [Answer]
     
     static func getQuestions() -> [Question] {
         [
             Question(
                 title: "Какую пищу вы предпочитаете?",
-                responceType: .single,
+                responseType: .single,
                 answers: [
                     Answer(title: "Cтейк", animal: .dog),
                     Answer(title: "Рыба", animal: .cat),
@@ -24,7 +24,7 @@ struct Question {
             ),
             Question(
                 title: "Что вам нравится больше?",
-                responceType: .multiple,
+                responseType: .multiple,
                 answers: [
                     Answer(title: "Плавать", animal: .dog),
                     Answer(title: "Спать", animal: .cat),
@@ -34,7 +34,7 @@ struct Question {
             ),
             Question(
                 title: "Любите ли вы поездки на машине?",
-                responceType: .ranged,
+                responseType: .ranged,
                 answers: [
                     Answer(title: "Ненавижу", animal: .cat),
                     Answer(title: "Нервничаю", animal: .rabbit),
@@ -47,7 +47,7 @@ struct Question {
 }
 
 
-enum ResponceType {
+enum ResponseType {
     case single
     case multiple
     case ranged
